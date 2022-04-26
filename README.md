@@ -2,7 +2,7 @@
 
 This project is a Unity Example Game from the book [Introduction to Game Design, Prototyping, and Development, 2nd Edition](https://book.prototools.net/), by Jeremy Gibson Bond.
 
-It is a 2D arcade game prototype, inspired by the [Kaboom! game](https://en.wikipedia.org/wiki/Kaboom!_(video_game)).
+It is a classic arcade game prototype, inspired by the [Kaboom! game](https://en.wikipedia.org/wiki/Kaboom!_(video_game)).
 
 ## How to play
 
