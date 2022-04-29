@@ -4,6 +4,7 @@ This project is a Unity Example Game from the book [Introduction to Game Design,
 
 It is a classic arcade game prototype, inspired by the [Kaboom! game](https://en.wikipedia.org/wiki/Kaboom!_(video_game)).
 
+You can play it [here!](https://shaman37.itch.io/prototype-apple-picker)
 ## How to play
 
 Use your mouse to move the barrels along the X-axis to catch the falling apples. 
