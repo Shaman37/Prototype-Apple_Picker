@@ -9,7 +9,7 @@ public class AppleTree : MonoBehaviour
 
     public float speed = 1f;
 
-    public float leftAndRightEdge = 10f;
+    public float leftAndRightEdge;
 
     public float chanceToChangeDirection = 0.1f;
 
@@ -35,11 +35,13 @@ public class AppleTree : MonoBehaviour
         pos.x += speed * Time.deltaTime;
         transform.position = pos;
 
-        if (pos.x < -leftAndRightEdge)
+        float edge = Camera.main.ViewportToWorldPoint(Vector3.right).x - 2;
+
+        if (pos.x < -edge)
         {
             speed = Mathf.Abs(speed);
         }
-        else if (pos.x > leftAndRightEdge)
+        else if (pos.x > edge)
         {
             speed = -Mathf.Abs(speed);
         }

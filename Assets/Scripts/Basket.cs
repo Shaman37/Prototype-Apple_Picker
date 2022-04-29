@@ -8,6 +8,7 @@ public class Basket : MonoBehaviour
     [Header("Set Dynamically")]
     public Text scoreGT;
     AudioSource basketAudio;
+    public float leftAndRightEdge;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +21,26 @@ public class Basket : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Vector3 mousePos2D = Input.mousePosition;
+    {   
 
+        Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
 
         Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
-
         Vector3 pos = this.transform.position;
         pos.x = mousePos3D.x;
+
+        float edge = Camera.main.ViewportToWorldPoint(Vector3.right).x - 3;
+
+        if (pos.x < -edge)
+        {
+            pos.x = -edge;
+        }
+        else if (pos.x > edge)
+        {
+            pos.x = edge;
+        } 
+
         this.transform.position = pos;
     }
 
